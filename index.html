@@ -2,31 +2,16 @@
 <html>
 <head>
     <title>Old Norse Translator</title>
-    <script>
-        function translate() {
-            var input = document.getElementById("inputText").value.toLowerCase();
-            var output = document.getElementById("outputText");
-
-            var translatedText = "";
-
-            // Add translation logic here based on the Old Norse language rules
-            // You can implement your own translation algorithm or use a pre-existing library
-
-            output.innerHTML = translatedText;
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Old Norse Translator</h1>
-    <textarea id="inputText" rows="5" cols="50"></textarea><br>
+    <textarea id="inputText" rows="5" cols="50" placeholder="Enter English text..."></textarea>
+    <br>
     <button onclick="translate()">Translate</button>
     <br>
     <p id="outputText"></p>
-</body>
-</html>
 
-</body>
-</html>
-
+    <script src="translator.js"></script>
 </body>
 </html>
