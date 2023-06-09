@@ -1,25 +1,27 @@
 body {
+    font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 100px;
 }
 
 h1 {
-    color: #333;
+    margin-top: 20px;
 }
 
 textarea {
     width: 400px;
-    height: 200px;
-    resize: none;
+    height: 100px;
+    margin-top: 20px;
+    font-size: 16px;
     padding: 5px;
 }
 
 button {
     padding: 10px 20px;
     margin-top: 10px;
+    font-size: 16px;
 }
 
-p {
-    margin-top: 10px;
-    font-weight: bold;
+#output-text {
+    margin-top: 20px;
+    font-size: 18px;
 }
