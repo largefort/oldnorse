@@ -3,16 +3,16 @@
 <head>
     <title>Old Norse Translator</title>
     <script>
-        // Old Norse to English word dictionary
+        // English to Old Norse word dictionary
         var dictionary = {
-            "Hvat": "What",
-            "segir": "do you say",
-            "þú": "you",
+            "what": "hvat",
+            "do": "gøra",
+            "you": "þú",
             // Add more words to the dictionary as needed
         };
 
         function translate() {
-            var input = document.getElementById("inputText").value;
+            var input = document.getElementById("inputText").value.toLowerCase();
             var output = document.getElementById("outputText");
 
             var translatedText = "";
@@ -37,5 +37,8 @@
     <button onclick="translate()">Translate</button>
     <br>
     <p id="outputText"></p>
+</body>
+</html>
+
 </body>
 </html>
