@@ -6,10 +6,13 @@ var dictionary = {
     // Add more words to the dictionary as needed
 };
 
-function translateTextToOldNorse(text) {
+function translate() {
+    var input = document.getElementById("inputText").value.toLowerCase();
+    var output = document.getElementById("outputText");
+
     var translatedText = "";
 
-    var words = text.toLowerCase().split(" ");
+    var words = input.split(" ");
     for (var i = 0; i < words.length; i++) {
         var word = words[i];
         if (dictionary.hasOwnProperty(word)) {
@@ -19,10 +22,5 @@ function translateTextToOldNorse(text) {
         }
     }
 
-    return translatedText.trim();
+    output.innerHTML = translatedText.trim();
 }
-
-// Example usage
-var inputText = "What do you say?";
-var translatedText = translateTextToOldNorse(inputText);
-console.log(translatedText); // Output: "hvat gøra þú?"
