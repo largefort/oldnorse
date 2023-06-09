@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Old Norse Translator</title>
+    <script>
+        // Old Norse to English word dictionary
+        var dictionary = {
+            "Hvat": "What",
+            "segir": "do you say",
+            "þú": "you",
+            // Add more words to the dictionary as needed
+        };
+
+        function translate() {
+            var input = document.getElementById("inputText").value;
+            var output = document.getElementById("outputText");
+
+            var translatedText = "";
+
+            var words = input.split(" ");
+            for (var i = 0; i < words.length; i++) {
+                var word = words[i];
+                if (dictionary.hasOwnProperty(word)) {
+                    translatedText += dictionary[word] + " ";
+                } else {
+                    translatedText += word + " ";
+                }
+            }
+
+            output.innerHTML = translatedText.trim();
+        }
+    </script>
+</head>
+<body>
+    <h1>Old Norse Translator</h1>
+    <textarea id="inputText" rows="5" cols="50"></textarea><br>
+    <button onclick="translate()">Translate</button>
+    <br>
+    <p id="outputText"></p>
+</body>
+</html>
