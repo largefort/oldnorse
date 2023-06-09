@@ -1,26 +1,50 @@
-// English to Old Norse word dictionary
-var dictionary = {
-    "what": "hvat",
-    "do": "gøra",
-    "you": "þú",
-    // Add more words to the dictionary as needed
+// Rune translation object
+const runeTranslations = {
+    A: "ᚨ",
+    B: "ᛒ",
+    C: "ᚲ",
+    D: "ᛞ",
+    E: "ᛖ",
+    F: "ᚠ",
+    G: "ᚷ",
+    H: "ᚺ",
+    I: "ᛁ",
+    J: "ᛃ",
+    K: "ᚲ",
+    L: "ᛚ",
+    M: "ᛗ",
+    N: "ᚾ",
+    O: "ᛟ",
+    P: "ᛈ",
+    Q: "ᚲ",
+    R: "ᚱ",
+    S: "ᛋ",
+    T: "ᛏ",
+    U: "ᚢ",
+    V: "ᚢ",
+    W: "ᚹ",
+    X: "ᛉ",
+    Y: "ᚤ",
+    Z: "ᛉ"
 };
 
-function translate() {
-    var input = document.getElementById("inputText").value.toLowerCase();
-    var output = document.getElementById("outputText");
+// Function to translate text
+function translateText() {
+    const input = document.getElementById("input-text").value.toUpperCase();
+    let output = "";
 
-    var translatedText = "";
-
-    var words = input.split(" ");
-    for (var i = 0; i < words.length; i++) {
-        var word = words[i];
-        if (dictionary.hasOwnProperty(word)) {
-            translatedText += dictionary[word] + " ";
+    for (let i = 0; i < input.length; i++) {
+        const char = input[i];
+        if (char in runeTranslations) {
+            output += runeTranslations[char];
         } else {
-            translatedText += word + " ";
+            output += char;
         }
     }
 
-    output.innerHTML = translatedText.trim();
+    document.getElementById("output-text").textContent = output;
 }
+
+// Add event listener to the translate button
+document.getElementById("translate-btn").addEventListener("click", translateText);
+
