@@ -1,25 +1,47 @@
 body {
+    font-family: "Arial Black", sans-serif;
     text-align: center;
-    margin-top: 100px;
+    background-color: #eee;
+    background-image: url("viking-background.jpg");
+    background-size: cover;
+    color: #fff;
 }
 
 h1 {
-    color: #333;
+    margin-top: 50px;
+    font-size: 40px;
 }
 
 textarea {
     width: 400px;
-    height: 200px;
-    resize: none;
-    padding: 5px;
+    height: 150px;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    border-radius: 5px;
+    border: none;
 }
 
 button {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #6e4011;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-p {
-    margin-top: 10px;
-    font-weight: bold;
+button:hover {
+    background-color: #472906;
+}
+
+#output-text {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #000;
 }
