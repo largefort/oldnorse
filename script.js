@@ -95,9 +95,9 @@ showHistory();
 window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading-screen');
     setTimeout(function() {
-        loadingScreen.style.opacity = '0';
+        loadingScreen.style.opacity = '100';
         setTimeout(function() {
             loadingScreen.style.display = 'none';
-        }, 1000); // This time is in milliseconds
-    }, 2000); // This time is in milliseconds
+        }, 1000); // This time is in seconds
+    }, 10); // This time is in seconds
 });
