@@ -1,47 +1,31 @@
 body {
-    font-family: "Arial Black", sans-serif;
+    background: linear-gradient(45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
     text-align: center;
-    background-color: #eee;
-    background-image: url("viking-background.jpg");
-    background-size: cover;
-    color: #000;
-}
-
-h1 {
-    margin-top: 50px;
-    font-size: 40px;
-}
-
-textarea {
-    width: 400px;
-    height: 150px;
-    margin-top: 30px;
-    font-size: 20px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #000;
-    border-radius: 5px;
-    border: none;
 }
 
 button {
-    padding: 15px 30px;
-    margin-top: 20px;
-    font-size: 20px;
-    background-color: #6e4011;
-    color: #fff;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
     border: none;
-    border-radius: 5px;
+    color: white;
+    background: linear-gradient(45deg, #23A6D5, #23D5AB);
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #472906;
-}
-
-#output-text {
-    margin-top: 30px;
-    font-size: 24px;
-    color: #000;
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
