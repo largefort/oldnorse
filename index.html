@@ -6,9 +6,23 @@
 </head>
 <body>
     <h1>ᚱᚢᚾᛖ ᛏᚱᚨᚾᛋᛚᚨᛏᛟᚱ</h1>
+    
     <textarea id="input-text" placeholder="Enter text to translate"></textarea>
+    
+    <label for="language-select">Select Language:</label>
+    <select id="language-select">
+        <option value="english">English</option>
+        <option value="german">German</option>
+        <!-- Add as many options as you want -->
+    </select>
+    
     <button id="translate-btn">Translate</button>
+    <button id="clear-btn">Clear</button>
+    
     <div id="output-text"></div>
+    
+    <h2>Translation History</h2>
+    <ul id="history"></ul>
 
     <script src="script.js"></script>
 </body>
