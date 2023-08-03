@@ -43,8 +43,20 @@ function translateText() {
     }
 
     document.getElementById("output-text").textContent = output;
+
+    // Add to history
+    const history = document.getElementById("history");
+    const item = document.createElement("li");
+    item.textContent = `Input: ${input}, Output: ${output}`;
+    history.prepend(item); // prepend to show latest translation at the top
 }
 
-// Add event listener to the translate button
-document.getElementById("translate-btn").addEventListener("click", translateText);
+// Function to clear text
+function clearText() {
+    document.getElementById("input-text").value = '';
+    document.getElementById("output-text").textContent = '';
+}
 
+// Add event listeners
+document.getElementById("translate-btn").addEventListener("click", translateText);
+document.getElementById("clear-btn").addEventListener("click", clearText);
