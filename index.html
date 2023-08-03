@@ -5,42 +5,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>ᚱᚢᚾᛖ ᛏᚱᚨᚾᛋᛚᚨᛏᛟᚱ</h1>
-    </header>
-    
-    <main>
-        <section id="translator">
-            <div class="input-area">
-                <textarea id="input-text" placeholder="Enter text to translate"></textarea>
-                
-                <div class="buttons">
-                    <button id="translate-btn">Translate</button>
-                    <button id="clear-btn">Clear</button>
-                </div>
-            </div>
-
-            <div class="language-selection">
-                <label for="language-select">Select Language:</label>
-                <select id="language-select">
-                    <option value="english">English</option>
-                    <option value="german">German</option>
-                    <!-- Add as many options as you want -->
-                </select>
-            </div>
-        </section>
-        
-        <section id="output">
-            <h2>Translated Text</h2>
-            <div id="output-text"></div>
-        </section>
-        
-        <section id="history">
-            <h2>Translation History</h2>
-            <ul></ul>
-        </section>
-    </main>
-
+    <div id="loading-screen">
+        <div class="rune-symbol">
+            ᚠ <!-- Add your rune symbol here -->
+        </div>
+    </div>
+    <h1>ᚱᚢᚾᛖ ᛏᚱᚨᚾᛋᛚᚨᛏᛟᚱ</h1>
+    <textarea id="input-text" placeholder="Enter text to translate"></textarea>
+    <button id="translate-btn">Translate</button>
+    <button id="clear-btn">Clear</button>
+    <div id="output-text"></div>
+    <h2>Translation History</h2>
+    <ul id="history"></ul>
     <script src="script.js"></script>
 </body>
 </html>
