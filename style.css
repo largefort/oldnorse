@@ -6,15 +6,56 @@ body {
     padding: 20px;
 }
 
-@keyframes gradient {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+h1, h2 {
+    text-align: center;
 }
 
-textarea, button {
+textarea, button, select {
     display: block;
     margin: 1em 0;
+    width: 100%;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #007BFF;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:hover:before {
+    opacity: 1;
+    transform: scale(1);
 }
 
 #loading-screen {
@@ -39,4 +80,22 @@ textarea, button {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    textarea {
+        width: 90%;
+    }
+    .rune-symbol {
+        font-size: 3rem;
+    }
+    #output-text, #history {
+        font-size: 0.8rem;
+    }
 }
