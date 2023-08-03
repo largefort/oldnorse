@@ -99,5 +99,5 @@ window.addEventListener('load', function() {
         setTimeout(function() {
             loadingScreen.style.display = 'none';
         }, 1000); // This time is in seconds
-    }, 10); // This time is in seconds
+    }, 1000); // This time is in seconds
 });
