@@ -2,20 +2,32 @@
 <html>
 <head>
     <title>ᚱᚢᚾᛖ ᛏᚱᚨᚾᛋᛚᚨᛏᛟᚱ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div id="loading-screen">
-        <div class="rune-symbol">ᚱ</div>
-        <div class="loading-message">Loading...</div>
+        <img src="loading.gif" class="loading-gif" alt="Loading...">
+        <div class="loading-message">
+            <h2>Loading Rune Translator...</h2>
+            <p>Tips: Click on translate button to see your text translated into runes!</p>
+        </div>
     </div>
-
     <header>
         <h1>ᚱᚢᚾᛖ ᛏᚱᚨᚾᛋᛚᚨᛏᛟᚱ</h1>
     </header>
     
     <main>
         <section id="translator">
+            <div class="input-area">
+                <textarea id="input-text" placeholder="Enter text to translate"></textarea>
+                
+                <div class="buttons">
+                    <button id="translate-btn"><i class="fas fa-language"></i> Translate</button>
+                    <button id="clear-btn"><i class="fas fa-eraser"></i> Clear</button>
+                </div>
+            </div>
+
             <div class="language-selection">
                 <label for="language-select">Select Language:</label>
                 <select id="language-select">
@@ -23,15 +35,6 @@
                     <option value="german">German</option>
                     <!-- Add as many options as you want -->
                 </select>
-            </div>
-
-            <div class="input-area">
-                <textarea id="input-text" placeholder="Enter text to translate"></textarea>
-                
-                <div class="buttons">
-                    <button id="translate-btn">Translate</button>
-                    <button id="clear-btn">Clear</button>
-                </div>
             </div>
         </section>
         
