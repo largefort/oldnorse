@@ -7,6 +7,7 @@
 <body>
     <div id="loading-screen">
         <div class="rune-symbol">ᚱ</div>
+        <div class="loading-message">Loading...</div>
     </div>
 
     <header>
@@ -15,15 +16,6 @@
     
     <main>
         <section id="translator">
-            <div class="input-area">
-                <textarea id="input-text" placeholder="Enter text to translate"></textarea>
-                
-                <div class="buttons">
-                    <button id="translate-btn">Translate</button>
-                    <button id="clear-btn">Clear</button>
-                </div>
-            </div>
-
             <div class="language-selection">
                 <label for="language-select">Select Language:</label>
                 <select id="language-select">
@@ -31,6 +23,15 @@
                     <option value="german">German</option>
                     <!-- Add as many options as you want -->
                 </select>
+            </div>
+
+            <div class="input-area">
+                <textarea id="input-text" placeholder="Enter text to translate"></textarea>
+                
+                <div class="buttons">
+                    <button id="translate-btn">Translate</button>
+                    <button id="clear-btn">Clear</button>
+                </div>
             </div>
         </section>
         
