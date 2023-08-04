@@ -33,6 +33,8 @@ body {
     flex-direction: column;
     animation: fadeOut 1s forwards;
     animation-delay: 10s;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 @keyframes fadeOut {
@@ -41,13 +43,22 @@ body {
 }
 
 .loading-gif {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 .loading-message {
     color: white;
     text-align: center;
+    max-width: 90%;
+}
+
+.loading-message h2 {
+    font-size: 2.5em;
+}
+
+.loading-message p {
+    font-size: 1.5em;
 }
 
 header {
@@ -99,4 +110,33 @@ main {
 #history ul {
     list-style-type: none;
     padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .loading-message h2 {
+        font-size: 1.5em;
+    }
+  
+    .loading-message p {
+        font-size: 1em;
+    }
+
+    .loading-gif {
+        width: 25px;
+        height: 25px;
+    }
+
+    #translator {
+        flex-direction: column;
+    }
+
+    .input-area, .language-selection {
+        flex: auto;
+        max-width: 100%;
+    }
+    
+    .language-selection {
+        padding-left: 0;
+        margin-top: 20px;
+    }
 }
