@@ -12,8 +12,18 @@
             <h1>Viking Rune Translator</h1>
         </header>
         <main>
+            <label for="alphabet-select">Select Alphabet:</label>
+            <select id="alphabet-select">
+                <option value="elder-futhark">Elder Futhark</option>
+                <option value="younger-futhark">Younger Futhark</option>
+                <!-- Add more options for other runic alphabets -->
+            </select>
+
             <textarea id="input-text" placeholder="Enter text to translate"></textarea>
             <button id="translate-btn">Translate</button>
+            <button id="clear-btn">Clear</button>
+            <button id="copy-btn">Copy to Clipboard</button>
+
             <div id="output-text"></div>
         </main>
     </div>
